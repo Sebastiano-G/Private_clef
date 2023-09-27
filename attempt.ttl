@@ -1,0 +1,14 @@
+
+<https://w3id.org/clef/1> a <http://author.com> ;
+	<http://schema.org/familyName> "John" ;
+	<http://schema.org/givenName> "Doe" ;
+	<http://schema.org/identifier> "0000000-1111111" ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "John" .
+	
+
+<https://w3id.org/clef/2> a <http://publication.com> ;
+	<http://schema.org/author> <https://w3id.org/clef/1> ;
+	<http://schema.org/publishedOn> "2023"^^<http://www.w3.org/2001/XMLSchema#gYear> ;
+	<http://schema.org/title> "A random publication" ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "A random publication" .
+
