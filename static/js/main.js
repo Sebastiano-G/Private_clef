@@ -1850,7 +1850,7 @@ function save_vocab(element) {
   // extract a label, a url, a query, and an endpoint to store a new vocab
   var label = $('#vocabLabel').val();
   var url = $('#vocabUrl').val();
-  var query = $('#vocabQuery').val();
+  var query = encodeURIComponent($('#vocabQuery').val());
   var endpoint = $('#vocabEndpoint').val();
   // combine the pieces of information together and check whether some info is missing
   var infoArray = [label, url, query, endpoint];
@@ -1953,7 +1953,7 @@ function add_extractor(element) {
     </section>";
   } else if (selected == 'file' || selected == 'Select') {
     var form = "<section class='row extractor_1'>\
-    <label class='col-md-3'>FILE URL<br><span class='comment'>a URL to an external resource</span></label>\
+    <label class='col-md-3'>FILE URL<br><span class='comment'>a URL to an external resource (a .json or .csv file)</span></label>\
     <input type='text' id='FileUrl' placeholder='http://externalResource.csv' class='col-md-8'></input>\
     </section>\
     <section class='row extractor_1'>\
@@ -1974,12 +1974,8 @@ function prev_extractor(to_hide, to_show, remove=false, id=null) {
   $('.'+to_show).show();
   if (remove) {
     const button = $('.import_form').eq(0);
-    button.find(".imported_graphs").prepend($("<li id='graph-"+id+"'><label>Extraction Graph:  <i class='fas fa-trash' onclick='delete_extractor("+id+")'></i></label><br></li>"));
-    $('.block_field.col-md-12').replaceWith(button);
-    $('.homeheading').eq(0).attr('class', 'homeheading col-md-8 col-lg-8 col-sm-8');
-    $('.homeheading.col-md-4.col-sm-4.col-lg-4').show();
-
-    if (id) {
+    if (id && $('#query_result_' + id).length>0) {
+      button.find(".imported_graphs").prepend($("<li id='graph-"+id+"'><label>Extraction Graph:  <i class='fas fa-trash' onclick='delete_extractor("+id+")'></i></label><br></li>"));
       var results = JSON.parse($('#query_result_' + id).val()).results.bindings;
       for (let idx = 0; idx < results.length; idx++) {
         for (const key in results[idx]) {
@@ -1994,7 +1990,10 @@ function prev_extractor(to_hide, to_show, remove=false, id=null) {
         button.find("#graph-" + id).append("<span class='tag' data-id='" + uri + "'>" + label + "</span><input type='hidden' name='keyword_"+id+"_"+label+"' value='"+encodeURIComponent(uri)+"'/>");
       }
     }
+    $('.block_field.col-md-12').replaceWith(button);
     button.show();
+    $('.homeheading').eq(0).attr('class', 'homeheading col-md-8 col-lg-8 col-sm-8');
+    $('.homeheading.col-md-4.col-sm-4.col-lg-4').show();
   }  
 }
 
@@ -2036,14 +2035,15 @@ function change_results_page(page_n, length) {
   var starting_result = 25 * (parseInt(page_n)-1);
   console.log(page_n, starting_result)
 
-  $('.extractor_3').find('tr').addClass('hidden-result');
+  $('.extractor_2').find('tr').addClass('hidden-result');
   if (length >= starting_result+25) {
-    var show_results = $('.extractor_3').find('tr').slice(starting_result, starting_result+25);
+    var show_results = $('.extractor_2').find('tr').slice(starting_result, starting_result+25);
   } else {
-    var show_results = $('.extractor_3').find('tr').slice(starting_result, length);
+    var show_results = $('.extractor_2').find('tr').slice(starting_result, length);
   }
   show_results.removeClass('hidden-result');
-  $('.extractor_3').find('th').parent().removeClass('hidden-result');
+  $('.extractor_2').find('th').parent().removeClass('hidden-result');
+  window.scrollTo(0, 0);
 }
 
 function call_sparqlanything(encoded, id, element_id, type) {
@@ -2084,7 +2084,7 @@ function call_sparqlanything(encoded, id, element_id, type) {
       result_sec.append(result_table);
       $('.extractor_1').hide();
       $('.block_field').append(result_sec);
-      extractor_pagination(result_json.results.bindings);
+      if (result_json.results.bindings.length > 25) {extractor_pagination(result_json.results.bindings)};
       var buttons = "<section class='row "+type+"_form extractor_2'>\
         <input id='"+type+"_back2' class='btn btn-dark extractor_2' style='margin-left:20px' value='Back' onClick='prev_extractor(\"extractor_2\", \"extractor_1\")'>\
         <input id='"+type+"_next2' class='btn btn-dark extractor_2' style='margin-left:20px' value='Import' onClick='prev_extractor(\"extractor_2\", \"form_row\", true,\""+ id+"\")'>\
