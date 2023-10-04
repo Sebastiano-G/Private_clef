@@ -10,6 +10,7 @@ import conf
 from collections import defaultdict,OrderedDict
 from importlib import reload
 from json.decoder import JSONDecodeError
+import urllib.parse
 
 
 RESOURCE_TEMPLATES = 'resource_templates/'
@@ -409,22 +410,24 @@ def update_skosVocabs(d, skos):
 	else:
 		with open(skos, 'r') as skos_list:
 			skos_file = json.load(skos_list)
-
+	
+	print(d)
 	selected_vocabs = []
 	for key in list(d.keys()):
 		if key.startswith("vocab") and key != "vocables":
 			number = int(re.search(r'\d+', key).group())
 			if number > len(skos_file):
-				label, url, sparql, endpoint = d[key].split("__")
-				query_elements = sparql.split(" ")
-				query_terms = [el.strip() for el in query_elements if el.strip().startswith("?")]
-				query_term = query_terms[0] if query_terms else "NO-QUERY"
+				label, url, query, endpoint = d[key].split("__")
 				skos_file[label] = {
 					"type": "SPARQL",
 					"url": url,
 					"endpoint": endpoint,
-					"query": sparql,
-					"extra": "FILTER(REGEX("+query_term+", QUERY-TERM, \"i\"))"
+					"query": urllib.parse.unquote(query.replace("\n", "").replace("\r", "")),
+					"results": {
+						"array": "results.bindings", 
+						"label": "label.value", 
+						"uri": "uri.value"
+					}
 				}
 				selected_vocabs.append(label)
 				with open(skos, 'w') as file:
