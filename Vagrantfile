@@ -16,9 +16,14 @@ SCRIPT
 
 $install = <<SCRIPT
 BLAZEGRAPH_PATH="/var/lib/blazegraph.jar"
+SPARQLANYTHING_PATH="/var/lib/sparql-anything-server-0.8.2.jar"
 
 if [ ! -f "$BLAZEGRAPH_PATH" ]; then
 	curl -L "https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/blazegraph.jar" --output $BLAZEGRAPH_PATH
+fi
+
+if [ ! -f "$SPARQLANYTHING_PATH" ]; then
+	curl -L "https://github.com/SPARQL-Anything/sparql.anything/releases/download/v0.8.2/sparql-anything-server-0.8.2.jar" --output $SPARQLANYTHING_PATH
 fi
 
 SCRIPT
@@ -37,6 +42,7 @@ $web_run = <<SCRIPT
 BLAZEGRAPH_PATH="/var/lib/blazegraph.jar"
 BLAZEGRAPH_PORT=3000
 BLAZEGRAPH_PROPERTY_FILE="/app/blaze_vm.properties"
+SPARQLANYTHING_PATH="/var/lib/sparql-anything-server-0.8.2.jar"
 SPARQLANYTHING_PORT=8081
 APP_DIR="/app"
 WEBAPP_PORT=8080
@@ -46,10 +52,12 @@ lsof -ti tcp:${BLAZEGRAPH_PORT} | xargs --no-run-if-empty kill
 java -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -server -Xmx2g -Djetty.port=${BLAZEGRAPH_PORT} -Dbigdata.propertyFile=$BLAZEGRAPH_PROPERTY_FILE -Djetty.start.timeout=60 -jar $BLAZEGRAPH_PATH &
 sleep 10
 
-cd $APP_DIR
+
 echo -n "Running SPARQL-Anything..."
-java -jar sparql-anything-server-0.8.2.jar --port=$SPARQLANYTHING_PORT &
+java -jar $SPARQLANYTHING_PATH --port=$SPARQLANYTHING_PORT &
 sleep 5
+
+cd $APP_DIR
 
 echo -n "Running webapp..."
 python3 app.py $WEBAPP_PORT &
