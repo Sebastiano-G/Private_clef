@@ -1,0 +1,24 @@
+{ 
+    "authors": [
+        {
+            "autore": "Dante",
+            "opera": "Divina Commedia"
+        },
+        {
+            "autore": "Petrarca",
+            "opera": "Il Canzoniere"
+        },
+        {
+            "autore": "Boccaccio",
+            "opera": "Decameron"
+        },
+        {
+            "autore": "Manzoni",
+            "opera": "I Promessi Sposi"
+        },
+        {
+            "autore": "Leopardi",
+            "opera": "L'Infinito"
+        }
+    ]
+}
