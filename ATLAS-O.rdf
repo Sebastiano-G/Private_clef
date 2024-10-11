@@ -49,6 +49,8 @@
     <!-- http://purl.org/dc/terms/conformsTo -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/conformsTo">
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">A recognized standard that the described resource adheres to.</rdfs:comment>
         <rdfs:label xml:lang="en">conforms to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -91,15 +93,10 @@
     <!-- http://schema.org/additionalType -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/additionalType">
+        <rdfs:domain rdf:resource="http://purl.org/spar/fabio/ComputerProgram"/>
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">An additional type for the item, typically used for adding more specific types from a list of defined terms or external vocabularies. This is a relationship between a resource and a class that the resource is in.</rdfs:comment>
         <rdfs:label xml:lang="en">additional type</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://schema.org/citation -->
-
-    <owl:ObjectProperty rdf:about="http://schema.org/citation">
-        <rdfs:label xml:lang="en">citation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -107,6 +104,8 @@
     <!-- http://schema.org/conditionsOfAccess -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/conditionsOfAccess">
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">Information about the right or mode the resource can be accessed. Values from external vocabularies and defined terms should be preferred.</rdfs:comment>
         <rdfs:label xml:lang="en">conditions of access</rdfs:label>
     </owl:ObjectProperty>
     
@@ -117,6 +116,7 @@
     <owl:ObjectProperty rdf:about="http://schema.org/contributor">
         <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">A secondary contributor involved in the creation of the resource.</rdfs:comment>
         <rdfs:label xml:lang="en">contributor</rdfs:label>
     </owl:ObjectProperty>
     
@@ -125,6 +125,8 @@
     <!-- http://schema.org/creativeWorkStatus -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/creativeWorkStatus">
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">The status of a creative work in terms of its stage in a lifecycle. Values from external vocabularies and defined terms should be preferred.</rdfs:comment>
         <rdfs:label xml:lang="en">creative work status</rdfs:label>
     </owl:ObjectProperty>
     
@@ -135,15 +137,8 @@
     <owl:ObjectProperty rdf:about="http://schema.org/creator">
         <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
         <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">The main creator involved in the creation of the resource.</rdfs:comment>
         <rdfs:label xml:lang="en">creator</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://schema.org/distribution -->
-
-    <owl:ObjectProperty rdf:about="http://schema.org/distribution">
-        <rdfs:label xml:lang="en">distribution</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -151,6 +146,8 @@
     <!-- http://schema.org/educationalUse -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/educationalUse">
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">The educational/research purpose of a resource. Values from external vocabularies and defined terms should be preferred.</rdfs:comment>
         <rdfs:label xml:lang="en">educational use</rdfs:label>
     </owl:ObjectProperty>
     
@@ -323,9 +320,21 @@
     <!-- http://schema.org/archivedAt -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/archivedAt">
+        <rdfs:domain rdf:resource="http://www.w3.org/dh-atlas/Software"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:label xml:lang="en">Indicates a Web page or other link where a resource is archived.</rdfs:label>
         <rdfs:label xml:lang="en">archived at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/citation -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/citation">
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A reference to another creative work, such as another publication, web page, scholarly article, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">citation</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -335,7 +344,7 @@
     <owl:DatatypeProperty rdf:about="http://schema.org/datePublished">
         <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:comment xml:lang="en">Date of first publication of a Dataset</rdfs:comment>
+        <rdfs:comment xml:lang="en">Date of first publication of a Dataset.</rdfs:comment>
         <rdfs:label xml:lang="en">date published</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -346,8 +355,19 @@
     <owl:DatatypeProperty rdf:about="http://schema.org/dissolutionDate">
         <rdfs:domain rdf:resource="http://schema.org/ResearchProject"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:comment xml:lang="en">The completion date of a Research Project&apos;s activity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The end date of a Research Project&apos;s activity.</rdfs:comment>
         <rdfs:label xml:lang="en">dissolution date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/distribution -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/distribution">
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">A URL of a downloadable form of a dataset, at a specific location, in a specific format. Usage Note: If a dataset is available for download only through a webpage that requires following certain links, providing information, or checking some boxes, the URL of this page must be indicated, even if it matches the value of schema:url</rdfs:comment>
+        <rdfs:label xml:lang="en">distribution</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -366,6 +386,9 @@
     <!-- http://schema.org/identifier -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/identifier">
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">An unambiguous reference assigned to the resource being registered. This can be any alphanumeric string conforming to a recognized identification system (e.g., ORCiD, DOI, ISBN, ISSN, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">identifier</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -374,7 +397,6 @@
     <!-- http://schema.org/name -->
 
     <owl:DatatypeProperty rdf:about="http://schema.org/name">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">A name given to an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:DatatypeProperty>
@@ -385,7 +407,7 @@
 
     <owl:DatatypeProperty rdf:about="http://schema.org/size">
         <rdfs:domain rdf:resource="http://www.w3.org/dh-atlas/TextCollection"/>
-        <rdfs:comment xml:lang="en">A quantitaive description of a text collection, such as the number of texts included.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A quantitative description of a text collection, such as the number of texts included.</rdfs:comment>
         <rdfs:label xml:lang="en">size</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -418,6 +440,9 @@
     <!-- http://www.w3.org/dh-atlas/description -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/dh-atlas/description">
+        <rdfs:domain rdf:resource="http://purl.org/spar/fabio/WebSite"/>
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:domain rdf:resource="http://schema.org/ResearchProject"/>
         <rdfs:comment xml:lang="en">A description of an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">description</rdfs:label>
     </owl:DatatypeProperty>
@@ -429,6 +454,7 @@
     <owl:DatatypeProperty rdf:about="http://www.w3.org/dh-atlas/notesOnSource">
         <rdfs:domain rdf:resource="http://www.w3.org/dh-atlas/DigitalScholarlyEdition"/>
         <rdfs:domain rdf:resource="http://www.w3.org/dh-atlas/TextCollection"/>
+        <rdfs:comment xml:lang="en">Additional information or comments on the source(s) used to produce the Dataset. Notes may include details on the type of sources and their use.</rdfs:comment>
         <rdfs:label xml:lang="en">notes on source</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -575,6 +601,25 @@
     <!-- http://xmlns.com/foaf/0.1/Agent -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/dh-atlas/bestManuscriptEdition -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/dh-atlas/bestManuscriptEdition">
+        <rdfs:label xml:lang="en">best-manuscript edition</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
