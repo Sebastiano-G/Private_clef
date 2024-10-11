@@ -323,7 +323,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/dh-atlas/Software"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:label xml:lang="en">archived at</rdfs:label>
-        <rdfs:comment xml:lang="en">Indicates a Web page or other link where a resource is archived.</rdfs:label>
+        <rdfs:comment xml:lang="en">Indicates a Web page or other link where a resource is archived.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
