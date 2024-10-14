@@ -333,6 +333,7 @@ The ATLAS Ontology integrates existing and complementary ontological entities fr
     <!-- http://www.ebi.ac.uk/swo/SWO_0000086 -->
 
     <owl:ObjectProperty rdf:about="http://www.ebi.ac.uk/swo/SWO_0000086">
+        <rdfs:domain rdf:resource="http://www.w3.org/dh-atlas/Software"/>
         <rdfs:comment xml:lang="en">Specifies the file format(s) that the software accepts as input. Usage Note: The format should be described using a MIME type or a standardized file extension.</rdfs:comment>
         <rdfs:label xml:lang="en">has specified data input</rdfs:label>
     </owl:ObjectProperty>
@@ -342,6 +343,7 @@ The ATLAS Ontology integrates existing and complementary ontological entities fr
     <!-- http://www.ebi.ac.uk/swo/SWO_0000087 -->
 
     <owl:ObjectProperty rdf:about="http://www.ebi.ac.uk/swo/SWO_0000087">
+        <rdfs:domain rdf:resource="http://www.w3.org/dh-atlas/Software"/>
         <rdfs:comment>Specifies the file format(s) that the software produces as output. Usage Note: The format should be described using a MIME type or a standardized file extension.</rdfs:comment>
         <rdfs:label xml:lang="en">has specified data output</rdfs:label>
     </owl:ObjectProperty>
