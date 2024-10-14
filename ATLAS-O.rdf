@@ -439,10 +439,10 @@ The ATLAS Ontology integrates existing and complementary ontological entities fr
     
 
 
-    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+    <!-- http://purl.org/vocab/vann/preferredNamespaceURI -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
-        <rdfs:label xml:lang="en">preferred namespace prefix</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceURI">
+        <rdfs:label xml:lang="en">preferred namespace URI</rdfs:label>
     </owl:DatatypeProperty>
     
 
