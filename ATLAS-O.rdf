@@ -14,9 +14,11 @@
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.w3.org/dh-atlas/">
         <owl:versionIRI rdf:resource="http://www.w3.org/dh-atlas/"/>
-        <dc:abstract xml:lang="en">The ATLAS Ontology is an OWL 2 DL ontology, designed to effectively represent scholarly research projects and their outcomes within the Cultural Heritage domain.</dc:abstract>
         <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-15</dc:created>
         <dc:creator>Marilena Daquino, Francesca Tomasi, Sebastiano Giacomini</dc:creator>
+        <dc:description xml:lang="en">The ATLAS Ontology is an OWL 2 DL ontology, designed to effectively represent scholarly research projects and their outcomes within the Cultural Heritage domain. In particular, it focuses on highlighting the key characteristics of significant types of research products (Text Collection, Digital Scholarly Edition, Linked Open Data, Ontology, and Software), while considering their unique attributes and specifications. In so doing, it seeks to realise the potential of sharing protocols, good practices, guidelines and evaluation frameworks in the humanities.
+
+The ATLAS Ontology integrates existing and complementary ontological entities from three main standards—Schema.org, DCTerms, and FaBiO (the FRBR-aligned Bibliographic Ontology)—and introduces new ATLAS Classes and Properties to enhance granularity and specificity, thereby facilitating coherent connections between Classes across different vocabularies.</dc:description>
         <dc:rights rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40"/>
         <rdfs:label>The ATLAS Ontology</rdfs:label>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
@@ -50,6 +52,12 @@
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
