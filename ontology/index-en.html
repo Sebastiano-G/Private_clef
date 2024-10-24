@@ -18,6 +18,7 @@
 <script src="resources/marked.min.js"></script> 
     <script> 
 function loadHash() {
+	console.log("HASH");
 	console.log($(".markdown"))
   jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -27,39 +28,41 @@ function loadHash() {
 	loadTOC();
 }
 function loadTOC(){
+	console.log("TOC");
 	//process toc dynamically
 	  var t='<h2>Table of contents</h2><ol>';i = 1;j=0;
 	  jQuery(".list").each(function(){
 		if(jQuery(this).is('h2')){
-			if(j>0){
-				t+='</ol>';
-				j=0;
-			}
-			t+= '<li> <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
-			i++;
+					if(j>0){
+						t+='</ol>';
+						j=0;
+					}
+					t+= '<li> <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+					i++;
+				}
+				if(jQuery(this).is('h3')){
+					if(j==0){
+						t+='<ul>';
+					}
+					j++;
+					t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+				}
+			});
+			t+='</ul>';
+			$("#toc").html(t); 
 		}
-		if(jQuery(this).is('h3')){
-			if(j==0){
-				t+='<ul>';
-			}
-			j++;
-			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
-		}
-	  });
-	  t+='</ul>';
-	  $("#toc").html(t); 
-}
- $.fn.ignore = function(sel){
-        return this.clone().find(sel||">*").remove().end();
- };    $(function(){
-      $("#abstract").load("sections/abstract-en.html"); 
-      $("#introduction").load("sections/introduction-en.html"); 
-      $("#nstable").load("sections/ns-en.html"); 
-      $("#overview").load("sections/overview-en.html"); 
-      $("#description").load("sections/description-en.html"); 
-      $("#references").load("sections/references-en.html"); 
-      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
-    });
+		$.fn.ignore = function(sel){
+				return this.clone().find(sel||">*").remove().end();
+		};    
+		$(function(){
+			$("#abstract").load("sections/abstract-en.html"); 
+			$("#introduction").load("sections/introduction-en.html"); 
+			$("#nstable").load("sections/ns-en.html"); 
+			$("#overview").load("sections/overview-en.html"); 
+			$("#description").load("sections/description-en.html"); 
+			$("#references").load("sections/references-en.html"); 
+			$("#crossref").load("sections/crossref-en.html", null, loadHash); 
+		});
     </script> 
   </head> 
 
