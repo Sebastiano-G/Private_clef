@@ -1,0 +1,492 @@
+<http://www.w3id.org/dh-atlas/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3id.org/dh-atlas/> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3id.org/dh-atlas/2.0> .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/contributor> "Alessia Bardi" .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/contributor> "Angelo Mario Del Grosso" .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/contributor> "Chiara Martignano" .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/contributor> "Franz Fischer" .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/contributor> "Giorgia Rubin" .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/contributor> "Marina Buzzoni" .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/contributor> "Riccardo Del Gratta" .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/contributor> "Roberto Rosselli del Turco" .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/created> "2024-10-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/creator> "Francesca Tomasi" .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/creator> "Marilena Daquino" .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/creator> "Sebastiano Giacomini" .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/description> "The ATLAS Ontology is an OWL 2 DL ontology, designed to effectively represent scholarly research projects and their outcomes within the Cultural Heritage domain. In particular, it focuses on highlighting the key characteristics of significant types of research products (Text Collection, Digital Scholarly Edition, Linked Open Data, Ontology, Software, Language Model, and 3D Digital Twin), while considering their unique attributes and specifications. In so doing, it seeks to realise the potential of sharing protocols, good practices, guidelines and evaluation frameworks in the humanities.\n\nBuilt upon a Schema.org backbone, the ATLAS Ontology incorporates both general-purpose and domain-specific ontological standards—such as DCTerms, FaBiO, and Bibframe—by reusing and integrating their terms and types. To ensure greater semantic precision and expressiveness, it also introduces new ATLAS-specific Classes and Properties. This approach enables a higher level of granularity and fosters consistent, meaningful connections between Classes across diverse vocabularies."@en .
+<http://www.w3id.org/dh-atlas/> <http://purl.org/dc/elements/1.1/rights> <https://w3id.org/italia/controlled-vocabulary/licences/B11_CCBYNC40> .
+<http://www.w3id.org/dh-atlas/> <http://www.w3.org/2000/01/rdf-schema#label> "The ATLAS Ontology" .
+<http://www.w3id.org/dh-atlas/> <http://www.w3.org/2002/07/owl#priorVersion> <http://www.w3id.org/dh-atlas/1.0/> .
+<http://www.w3id.org/dh-atlas/> <http://www.w3.org/2002/07/owl#versionInfo> "2.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://ontosoft.org/software#hasImplementationLanguage
+<http://ontosoft.org/software#hasImplementationLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontosoft.org/software#hasImplementationLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/SoftwareApplication> .
+<http://ontosoft.org/software#hasImplementationLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "The language(s) the software is written in." .
+<http://ontosoft.org/software#hasImplementationLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "has implementation language" .
+# 
+# http://ontosoft.org/software#hasInput
+<http://ontosoft.org/software#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontosoft.org/software#hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/SoftwareApplication> .
+<http://ontosoft.org/software#hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> "The input files required by the software." .
+<http://ontosoft.org/software#hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input" .
+# 
+# http://ontosoft.org/software#hasOutput
+<http://ontosoft.org/software#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontosoft.org/software#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/SoftwareApplication> .
+<http://ontosoft.org/software#hasOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "The output files produced by the software." .
+<http://ontosoft.org/software#hasOutput> <http://www.w3.org/2000/01/rdf-schema#label> "has output" .
+# 
+# http://purl.org/dc/terms/conformsTo
+<http://purl.org/dc/terms/conformsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/conformsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://purl.org/dc/terms/conformsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A recognized standard that the described Dataset adheres to."@en .
+<http://purl.org/dc/terms/conformsTo> <http://www.w3.org/2000/01/rdf-schema#label> "conforms to"@en .
+# 
+# http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/DigitalScholarlyEdition> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/LinkedOpenData> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/Ontology> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/TextCollection> .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#comment> "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en .
+<http://purl.org/dc/terms/references> <http://www.w3.org/2000/01/rdf-schema#label> "references"@en .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/DigitalScholarlyEdition> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/TextCollection> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#comment> "A related resource from which one or more resources in the Dataset are derived or originated."@en .
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#label> "source"@en .
+# 
+# http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#comment> "The genre of the resource."@en .
+<http://purl.org/dc/terms/type> <http://www.w3.org/2000/01/rdf-schema#label> "type"@en .
+# 
+# http://schema.org/about
+<http://schema.org/about> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/about> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Dataset> .
+<http://schema.org/about> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject matter of the Dataset's content."@en .
+<http://schema.org/about> <http://www.w3.org/2000/01/rdf-schema#label> "about"@en .
+# 
+# http://schema.org/additionalType
+<http://schema.org/additionalType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/additionalType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/additionalType> <http://www.w3.org/2000/01/rdf-schema#comment> "An additional type for the item, typically used for adding more specific types from a list of defined terms or external vocabularies. This is a relationship between a resource and a class that the resource is in. Usage Note: typically the value is a URI-identified RDF class"@en .
+<http://schema.org/additionalType> <http://www.w3.org/2000/01/rdf-schema#label> "additional type"@en .
+# 
+# http://schema.org/applicationCategory
+<http://schema.org/applicationCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/applicationCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/SoftwareApplication> .
+<http://schema.org/applicationCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of software application." .
+<http://schema.org/applicationCategory> <http://www.w3.org/2000/01/rdf-schema#label> "application category" .
+# 
+# http://schema.org/conditionsOfAccess
+<http://schema.org/conditionsOfAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/conditionsOfAccess> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/conditionsOfAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the right or mode the Dataset's content can be accessed. Values from external vocabularies and defined terms should be preferred."@en .
+<http://schema.org/conditionsOfAccess> <http://www.w3.org/2000/01/rdf-schema#label> "conditions of access"@en .
+# 
+# http://schema.org/contributor
+<http://schema.org/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/contributor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/contributor> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://schema.org/contributor> <http://www.w3.org/2000/01/rdf-schema#comment> "A secondary contributor involved in the creation of the Dataset."@en .
+<http://schema.org/contributor> <http://www.w3.org/2000/01/rdf-schema#label> "contributor"@en .
+# 
+# http://schema.org/creativeWorkStatus
+<http://schema.org/creativeWorkStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/creativeWorkStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/creativeWorkStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of a Dataset in terms of its stage in a lifecycle. Values from external vocabularies and defined terms should be preferred."@en .
+<http://schema.org/creativeWorkStatus> <http://www.w3.org/2000/01/rdf-schema#label> "creative work status"@en .
+# 
+# http://schema.org/creator
+<http://schema.org/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/creator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/creator> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://schema.org/creator> <http://www.w3.org/2000/01/rdf-schema#comment> "The main creator involved in the creation of the Dataset."@en .
+<http://schema.org/creator> <http://www.w3.org/2000/01/rdf-schema#label> "creator"@en .
+# 
+# http://schema.org/educationalUse
+<http://schema.org/educationalUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/educationalUse> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/educationalUse> <http://www.w3.org/2000/01/rdf-schema#comment> "The educational/research purpose of a resource. Values from external vocabularies and defined terms should be preferred."@en .
+<http://schema.org/educationalUse> <http://www.w3.org/2000/01/rdf-schema#label> "educational use"@en .
+# 
+# http://schema.org/encodingFormat
+<http://schema.org/encodingFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/encodingFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "The encoding format in which the Dataset is released."@en .
+<http://schema.org/encodingFormat> <http://www.w3.org/2000/01/rdf-schema#label> "encoding format"@en .
+# 
+# http://schema.org/funder
+<http://schema.org/funder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/funder> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/ResearchProject> .
+<http://schema.org/funder> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://schema.org/funder> <http://www.w3.org/2000/01/rdf-schema#comment> "An Agent that supports (sponsors) a Research Project through some kind of financial contribution."@en .
+<http://schema.org/funder> <http://www.w3.org/2000/01/rdf-schema#label> "funder"@en .
+# 
+# http://schema.org/genre
+<http://schema.org/genre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/genre> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/DigitalScholarlyEdition> .
+<http://schema.org/genre> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/TextCollection> .
+<http://schema.org/genre> <http://www.w3.org/2000/01/rdf-schema#comment> "A literary category used to define the type of (a collection of) literary works, characterized by specific stylistic, thematic, or formal elements."@en .
+<http://schema.org/genre> <http://www.w3.org/2000/01/rdf-schema#label> "genre"@en .
+# 
+# http://schema.org/hasPart
+<http://schema.org/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/hasPart> <http://www.w3.org/2002/07/owl#inverseOf> <http://schema.org/isPartOf> .
+<http://schema.org/hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Dataset> .
+<http://schema.org/hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a Dataset that is part of this Dataset, in some sense."@en .
+<http://schema.org/hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has part"@en .
+# 
+# http://schema.org/inLanguage
+<http://schema.org/inLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/inLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/inLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "The language(s) used in/by the research product."@en .
+<http://schema.org/inLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "in language"@en .
+# 
+# http://schema.org/isBasedOn
+<http://schema.org/isBasedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/SoftwareApplication> .
+<http://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/WebSite> .
+<http://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/SoftwareApplication> .
+<http://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource from which this resource is derived or from which it is a modification or adaptation."@en .
+<http://schema.org/isBasedOn> <http://www.w3.org/2000/01/rdf-schema#label> "is based on"@en .
+# 
+# http://schema.org/isPartOf
+<http://schema.org/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Dataset> .
+<http://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a Dataset that this Dataset is part of, in some sense."@en .
+<http://schema.org/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is part of"@en .
+# 
+# http://schema.org/license
+<http://schema.org/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/license> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/license> <http://www.w3.org/2000/01/rdf-schema#comment> "A document containing details about license rights held in and over the Dataset."@en .
+<http://schema.org/license> <http://www.w3.org/2000/01/rdf-schema#label> "license"@en .
+# 
+# http://schema.org/location
+<http://schema.org/location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/location> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
+<http://schema.org/location> <http://www.w3.org/2000/01/rdf-schema#comment> "The location where the Research project (or its Organizations) is located."@en .
+<http://schema.org/location> <http://www.w3.org/2000/01/rdf-schema#label> "location"@en .
+# 
+# http://schema.org/member
+<http://schema.org/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
+<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#comment> "An Agent member of an Organization."@en .
+<http://schema.org/member> <http://www.w3.org/2000/01/rdf-schema#label> "member"@en .
+# 
+# http://schema.org/producer
+<http://schema.org/producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/producer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/producer> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/ResearchProject> .
+<http://schema.org/producer> <http://www.w3.org/2000/01/rdf-schema#comment> "The Research Project responsible for generating the Dataset."@en .
+<http://schema.org/producer> <http://www.w3.org/2000/01/rdf-schema#label> "producer"@en .
+# 
+# http://schema.org/publisher
+<http://schema.org/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://schema.org/publisher> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/publisher> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://schema.org/publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "The Agent responsible for publishing the Dataset."@en .
+<http://schema.org/publisher> <http://www.w3.org/2000/01/rdf-schema#label> "publisher"@en .
+# 
+# http://www.w3id.org/dh-atlas/editionType
+<http://www.w3id.org/dh-atlas/editionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/dh-atlas/editionType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
+<http://www.w3id.org/dh-atlas/editionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/DigitalScholarlyEdition> .
+<http://www.w3id.org/dh-atlas/editionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/TextCollection> .
+<http://www.w3id.org/dh-atlas/editionType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of edition that reflects how the editorial team has worked on the text and outlines the main objectives of the Digital Scholarly Edition. Usage Note: values from external vocabularies or defined terms should be preferred."@en .
+<http://www.w3id.org/dh-atlas/editionType> <http://www.w3.org/2000/01/rdf-schema#label> "edition type"@en .
+# 
+# http://www.w3id.org/dh-atlas/methodology
+<http://www.w3id.org/dh-atlas/methodology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/dh-atlas/methodology> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://www.w3id.org/dh-atlas/methodology> <http://www.w3.org/2000/01/rdf-schema#comment> "Research activities performed to realize the research product. Usage Note: values from external vocabularies and defined terms should be preferred."@en .
+<http://www.w3id.org/dh-atlas/methodology> <http://www.w3.org/2000/01/rdf-schema#label> "methodology"@en .
+# 
+# http://www.w3id.org/dh-atlas/referencedAuthor
+<http://www.w3id.org/dh-atlas/referencedAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/dh-atlas/referencedAuthor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/contributor> .
+<http://www.w3id.org/dh-atlas/referencedAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/DigitalScholarlyEdition> .
+<http://www.w3id.org/dh-atlas/referencedAuthor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/TextCollection> .
+<http://www.w3id.org/dh-atlas/referencedAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<http://www.w3id.org/dh-atlas/referencedAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "The main author(s) of the edited text(s) ."@en .
+<http://www.w3id.org/dh-atlas/referencedAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "referenced author"@en .
+# 
+# http://www.w3id.org/dh-atlas/servedBy
+<http://www.w3id.org/dh-atlas/servedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/dh-atlas/servedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://www.w3id.org/dh-atlas/servedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A data service (API, endpoint), software, or website that provides access to the Dataset."@en .
+<http://www.w3id.org/dh-atlas/servedBy> <http://www.w3.org/2000/01/rdf-schema#label> "served by"@en .
+# 
+# http://www.w3id.org/dh-atlas/used
+<http://www.w3id.org/dh-atlas/used> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3id.org/dh-atlas/used> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://www.w3id.org/dh-atlas/used> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Dataset> .
+<http://www.w3id.org/dh-atlas/used> <http://www.w3.org/2000/01/rdf-schema#comment> "A Dataset or software component that is partially or fully utilized in the creation or realization of the described Dataset."@en .
+<http://www.w3id.org/dh-atlas/used> <http://www.w3.org/2000/01/rdf-schema#label> "used"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://ontosoft.org/software#hasCodeLocation
+<http://ontosoft.org/software#hasCodeLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontosoft.org/software#hasCodeLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/SoftwareApplication> .
+<http://ontosoft.org/software#hasCodeLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://ontosoft.org/software#hasCodeLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL for the code of a piece of software" .
+<http://ontosoft.org/software#hasCodeLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has code location" .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/Ontology> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/2000/01/rdf-schema#comment> "The preferred namespace prefix to use when using terms from this vocabulary." .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/2000/01/rdf-schema#label> "preferred namespace prefix"@en .
+# 
+# http://schema.org/citation
+<http://schema.org/citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference to another creative work, such as another publication, web page, scholarly article, etc."@en .
+<http://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en .
+# 
+# http://schema.org/datePublished
+<http://schema.org/datePublished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/datePublished> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/datePublished> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://schema.org/datePublished> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of first publication of a Dataset."@en .
+<http://schema.org/datePublished> <http://www.w3.org/2000/01/rdf-schema#label> "date published"@en .
+# 
+# http://schema.org/dissolutionDate
+<http://schema.org/dissolutionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/ResearchProject> .
+<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The end date of a Research Project's activity."@en .
+<http://schema.org/dissolutionDate> <http://www.w3.org/2000/01/rdf-schema#label> "dissolution date"@en .
+# 
+# http://schema.org/distribution
+<http://schema.org/distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/distribution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/distribution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://schema.org/distribution> <http://www.w3.org/2000/01/rdf-schema#comment> "A URL of a downloadable form of a dataset, at a specific location, in a specific format. Usage Note: If a dataset is available for download only through a webpage that requires following certain links, providing information, or checking some boxes, the URL of this page must be indicated, even if it matches the value of schema:url"@en .
+<http://schema.org/distribution> <http://www.w3.org/2000/01/rdf-schema#label> "distribution"@en .
+# 
+# http://schema.org/foundingDate
+<http://schema.org/foundingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/ResearchProject> .
+<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The start date of a Research Project's activity."@en .
+<http://schema.org/foundingDate> <http://www.w3.org/2000/01/rdf-schema#label> "founding date"@en .
+# 
+# http://schema.org/identifier
+<http://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An unambiguous reference assigned to the resource being registered. This can be any alphanumeric string conforming to a recognized identification system (e.g., ORCiD, DOI, ISBN, ISSN, etc.)"@en .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
+# 
+# http://schema.org/name
+<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/SoftwareApplication> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/WebSite> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#comment> "A name given to an entity."@en .
+<http://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+# 
+# http://schema.org/size
+<http://schema.org/size> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/size> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/size> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://schema.org/size> <http://www.w3.org/2000/01/rdf-schema#comment> "A quantitative description of a text collection, such as the number of texts included."@en .
+<http://schema.org/size> <http://www.w3.org/2000/01/rdf-schema#label> "size"@en .
+# 
+# http://schema.org/url
+<http://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Organization> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL of a Web page accessible via a Web browser, leading to the landing page of a Dataset or displaying the Dataset's content and/or information."@en .
+<http://schema.org/url> <http://www.w3.org/2000/01/rdf-schema#label> "url"@en .
+# 
+# http://schema.org/usageInfo
+<http://schema.org/usageInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/usageInfo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/usageInfo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://schema.org/usageInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL of a Web page that contains the documentation for the resource."@en .
+<http://schema.org/usageInfo> <http://www.w3.org/2000/01/rdf-schema#label> "usage info"@en .
+# 
+# http://schema.org/version
+<http://schema.org/version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/version> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://schema.org/version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://schema.org/version> <http://www.w3.org/2000/01/rdf-schema#comment> "The current version of an item."@en .
+<http://schema.org/version> <http://www.w3.org/2000/01/rdf-schema#label> "version"@en .
+# 
+# http://www.w3id.org/dh-atlas/description
+<http://www.w3id.org/dh-atlas/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/dh-atlas/description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
+<http://www.w3id.org/dh-atlas/description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/ResearchProject> .
+<http://www.w3id.org/dh-atlas/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.w3id.org/dh-atlas/description> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of an entity."@en .
+<http://www.w3id.org/dh-atlas/description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
+# 
+# http://www.w3id.org/dh-atlas/notesOnSource
+<http://www.w3id.org/dh-atlas/notesOnSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3id.org/dh-atlas/notesOnSource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3id.org/dh-atlas/description> .
+<http://www.w3id.org/dh-atlas/notesOnSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/DigitalScholarlyEdition> .
+<http://www.w3id.org/dh-atlas/notesOnSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/dh-atlas/TextCollection> .
+<http://www.w3id.org/dh-atlas/notesOnSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.w3id.org/dh-atlas/notesOnSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Additional information or comments on the source(s) used to produce the Dataset. Notes may include details on the type of sources and their use."@en .
+<http://www.w3id.org/dh-atlas/notesOnSource> <http://www.w3.org/2000/01/rdf-schema#label> "notes on source"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/spar/fabio/Anthology
+<http://purl.org/spar/fabio/Anthology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/spar/fabio/MetadataDocument
+<http://purl.org/spar/fabio/MetadataDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/spar/fabio/OntologyDocument
+<http://purl.org/spar/fabio/OntologyDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://rdfs.org/ns/void#Dataset
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://schema.org/Dataset
+<http://schema.org/Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of data, published or curated by a single agent, describing some topic(s) of interest."@en .
+<http://schema.org/Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset"@en .
+# 
+# http://schema.org/Organization
+<http://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://schema.org/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en .
+# 
+# http://schema.org/Person
+<http://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> .
+<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+# 
+# http://schema.org/ResearchProject
+<http://schema.org/ResearchProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/ResearchProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Organization> .
+<http://schema.org/ResearchProject> <http://www.w3.org/2000/01/rdf-schema#comment> "A Research group undertaking some activities that lead to the creation of a Research product."@en .
+<http://schema.org/ResearchProject> <http://www.w3.org/2000/01/rdf-schema#label> "Research Project"@en .
+# 
+# http://schema.org/SoftwareApplication
+<http://schema.org/SoftwareApplication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://schema.org/WebSite
+<http://schema.org/WebSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3id.org/dh-atlas/DigitalScholarlyEdition
+<http://www.w3id.org/dh-atlas/DigitalScholarlyEdition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/dh-atlas/DigitalScholarlyEdition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/MetadataDocument> .
+<http://www.w3id.org/dh-atlas/DigitalScholarlyEdition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
+<http://www.w3id.org/dh-atlas/DigitalScholarlyEdition> <http://www.w3.org/2000/01/rdf-schema#comment> "An information resource which offers a critical representation of (normally) historical documents or texts following a methodology determined by a digital paradigm."@en .
+<http://www.w3id.org/dh-atlas/DigitalScholarlyEdition> <http://www.w3.org/2000/01/rdf-schema#label> "Digital Scholarly Edition"@en .
+# 
+# http://www.w3id.org/dh-atlas/LanguageModel
+<http://www.w3id.org/dh-atlas/LanguageModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/dh-atlas/LanguageModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
+<http://www.w3id.org/dh-atlas/LanguageModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/SoftwareApplication> .
+# 
+# http://www.w3id.org/dh-atlas/LinkedOpenData
+<http://www.w3id.org/dh-atlas/LinkedOpenData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/dh-atlas/LinkedOpenData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> .
+<http://www.w3id.org/dh-atlas/LinkedOpenData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
+<http://www.w3id.org/dh-atlas/LinkedOpenData> <http://www.w3.org/2000/01/rdf-schema#label> "Linked Open Data"@en .
+# 
+# http://www.w3id.org/dh-atlas/Ontology
+<http://www.w3id.org/dh-atlas/Ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/dh-atlas/Ontology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/OntologyDocument> .
+<http://www.w3id.org/dh-atlas/Ontology> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
+<http://www.w3id.org/dh-atlas/Ontology> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology"@en .
+# 
+# http://www.w3id.org/dh-atlas/Software
+<http://www.w3id.org/dh-atlas/Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/dh-atlas/Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
+<http://www.w3id.org/dh-atlas/Software> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/SoftwareApplication> .
+<http://www.w3id.org/dh-atlas/Software> <http://www.w3.org/2000/01/rdf-schema#label> "Software"@en .
+# 
+# http://www.w3id.org/dh-atlas/TextCollection
+<http://www.w3id.org/dh-atlas/TextCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/dh-atlas/TextCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Anthology> .
+<http://www.w3id.org/dh-atlas/TextCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
+<http://www.w3id.org/dh-atlas/TextCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Text Collection"@en .
+# 
+# http://www.w3id.org/dh-atlas/3DDigitalTwin
+<http://www.w3id.org/dh-atlas/3DDigitalTwin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3id.org/dh-atlas/3DDigitalTwin> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
